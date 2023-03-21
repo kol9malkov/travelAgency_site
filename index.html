@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>lesson 3</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#">Приключения без границ</a>
+        </div>
+        <ul class="links">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Горящие туры</a></li>
+          <li><a href="#">Поиск отелей</a></li>
+          <li><a href="#">Поиск туров</a></li>
+          <li><a href="#">О нас</a></li>
+        </ul>
+        <a href="#" class="action_btn">Личный кабинет</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Горящие туры</a></li>
+        <li><a href="#">Поиск отелей</a></li>
+        <li><a href="#">Поиск туров</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#" class="action_btn">Личный кабинет</a></li>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="home_data">
+          <h1>We are very glad to have you here</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+            In id cumque harum error odio recusandae dicta rerum praesentium ea
+            sunt!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
